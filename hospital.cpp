@@ -25,6 +25,8 @@ public:
     virtual string toString() const = 0;
 };
 
+cout<<"I am Nishant The hero of this film"
+
 // Doctor class inheriting from Person
 class Doctor : public Person {
 protected:
