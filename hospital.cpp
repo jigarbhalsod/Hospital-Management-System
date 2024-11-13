@@ -131,7 +131,7 @@ public:
 
     // Function to display billing details
     void showBillingDetails() const {
-        cout << "Billing Info:" << endl;
+        cout << "billing Info:" << endl;
         cout << "Doctor ID: " << doctor.getId() << ", Patient ID: " << patient.getId() << endl;
         cout << "Amount: $" << totalAmount << ", Payment Status: " << paymentStatus << endl;
     }
