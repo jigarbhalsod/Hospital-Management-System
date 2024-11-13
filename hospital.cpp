@@ -6,6 +6,90 @@
 #include <fstream>
 using namespace std;
 
+#include <string>
+#include <vector>
+
+struct PersonalInfo {
+    std::string name;
+    int age;
+    std::string gender;
+    std::string contactNumber;
+    std::string address;
+};
+
+struct DoctorInfo {
+    std::string doctorID;
+    PersonalInfo personalInfo;
+    std::string specialization;
+    int yearsOfExperience;
+    std::string contactNumber;
+};
+
+struct Appointment {
+    std::string appointmentID;
+    std::string patientID;
+    std::string doctorID;
+    std::string date;
+    std::string time;
+};
+
+struct RoomInfo {
+    int roomNumber;
+    std::string roomType;    // e.g., "ICU", "General", "Private"
+    bool isAvailable;
+    double roomRate;         // Rate per day
+};
+
+struct MedicalHistory {
+    std::string patientID;
+    std::vector<std::string> diagnoses;
+    std::vector<std::string> treatments;
+    std::vector<std::string> medications;
+};
+
+struct BillingInfo {
+    std::string billID;
+    std::string patientID;
+    double consultationFee;
+    double treatmentCost;
+    double roomCharges;
+    double discount;
+    double insuranceCoverage;
+    bool isPaid;
+};
+
+struct Medication {
+    std::string medicationID;
+    std::string name;
+    std::string dosage;        // e.g., "500mg"
+    int stockQuantity;
+    double pricePerUnit;
+};
+
+struct NurseInfo {
+    std::string nurseID;
+    PersonalInfo personalInfo;
+    std::string shift;        // e.g., "Day", "Night"
+    std::string contactNumber;
+};
+
+struct InsuranceDetails {
+    std::string insuranceID;
+    std::string patientID;
+    std::string provider;
+    double coveragePercentage;
+    std::string policyNumber;
+};
+
+struct InventoryItem {
+    std::string itemID;
+    std::string name;
+    int quantity;
+    std::string category;     // e.g., "Medical Supply", "Equipment"
+    double pricePerUnit;
+};
+
+
 // Base Person class
 class Person {
 protected:
