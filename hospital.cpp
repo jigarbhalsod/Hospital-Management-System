@@ -534,7 +534,7 @@ case 2:
         Patient newPatient(id, name, phone, illness);
         patients[patientCount++] = newPatient;
         savePatients(newPatient); 
-        cout << "Patient added successfully!\n";
+        cout << "Patient has been added successfully!\n";
     } else {
         cout << "Cannot add more patients.\n";
     }
@@ -569,7 +569,7 @@ case 2:
                         doctors[0].addAppointment(appt.appointmentID);
                         saveAppointment(appt);
                          
-                        cout << "Appointment scheduled successfully. ID: " << appt.appointmentID << endl;
+                        cout << "Appointment has been scheduled successfully. ID: " << appt.appointmentID << endl;
                     } else {
                         cout << "Doctor or Patient not found.\n";
                     }
@@ -589,7 +589,7 @@ case 2:
                         }
                     }
                     if (!docFound) {
-                        cout << "Doctor not found.\n";
+                        cout << "Doctor is not found.\n";
                     }
                     break;
                 }
