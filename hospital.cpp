@@ -230,6 +230,7 @@ public:
 };
 
 // Base InventoryItem class
+
 class InventoryItem {
 protected:
     int itemID;
@@ -261,7 +262,7 @@ public:
             quantity -= qty;
             cout << qty << " units used from " << name << ". Remaining stock: " << quantity << endl;
         } else {
-            cout << "Insufficient stock to use " << qty << " units.\n";
+            cout << "Insufficient stock to use for hospital " << qty << " units.\n";
         }
     }
 
