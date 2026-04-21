@@ -1,78 +1,153 @@
-<body>
-<h1>🏥 Hospital Management System</h1>
+# 🏥 Hospital Management System
 
-<div class="section">
-    <h2>Project Overview</h2>
-    <p>
-        This is a <span class="highlight">Hospital Management System</span> developed as part of the IT Workshop Lab Evaluation. 
-        The system provides a human-friendly, interactive interface for managing hospital operations, including doctors, patients, appointments, billing, and inventory.
-    </p>
-</div>
+A **console-based Hospital Management System in C++** designed to manage doctors, patients, appointments, billing, and inventory with structured logic and validation.
 
-<div class="section">
-    <h2>ITW-PROJECT</h2>
-    <p>
-        This project was created for the <span class="highlight">IT Workshop Lab Evaluation</span> to demonstrate efficient management of hospital resources and operations.
-    </p>
-</div>
+---
 
-<div class="section">
-    <h2>Collaborators</h2>
-    <ul>
-        <li>Ayush</li>
-        <li>Anupam</li>
-        <li>Jigar</li>
-        <li>Nishant</li>
-    </ul>
-</div>
+## 🚀 Project Purpose
 
-<div class="section">
-    <h2>Features</h2>
-    <ul>
-        <li>👩‍⚕️ Add and manage <strong>Doctors</strong> with specialization and contact details.</li>
-        <li>🧑‍⚕️ Add and manage <strong>Patients</strong> with illness records and personal info.</li>
-        <li>📅 Schedule and track <strong>Appointments</strong> between doctors and patients.</li>
-        <li>💰 Generate <strong>Bills</strong> and manage payment status.</li>
-        <li>📦 Manage <strong>Inventory</strong> including medicines and equipment with stock updates, expiry, and maintenance tracking.</li>
-        <li>✅ Humanized, interactive console UI with separators, emojis, and input validation.</li>
-    </ul>
-</div>
+Built for **IT Workshop Lab Evaluation** to demonstrate:
 
-<div class="section">
-    <h2>Technology Stack</h2>
-    <ul>
-        <li>Language: <span class="highlight">C++</span></li>
-        <li>Console-based interface (humanized with prompts and separators)</li>
-        <li>File handling for persistent storage (Doctors, Patients, Appointments)</li>
-    </ul>
-</div>
+* Object-Oriented Design (OOP)
+* Data handling & validation
+* System-level thinking (not just features)
 
-<div class="section">
-    <h2>Usage</h2>
-    <p>
-        1. Compile the code using a C++ compiler (e.g., <code>g++ main.cpp -o hospital</code>).<br>
-        2. Run the executable (<code>./hospital</code> on Linux/Mac or <code>hospital.exe</code> on Windows).<br>
-        3. Navigate through menus for Hospital Management and Inventory Management.<br>
-        4. Add doctors, patients, schedule appointments, generate bills, and manage inventory interactively.
-    </p>
-</div>
+---
 
-<div class="section">
-    <h2>Notes</h2>
-    <ul>
-        <li>All IDs and phone numbers have input validation for correctness.</li>
-        <li>The inventory system supports both Medicines and Equipment with stock tracking.</li>
-        <li>The system uses file storage for persistent data across sessions.</li>
-    </ul>
-</div>
+## 👥 Team
 
-<div class="section">
-    <h2>Future Enhancements</h2>
-    <ul>
-        <li>Graphical user interface (GUI) using Qt or Flutter for C++.</li>
-        <li>Integration with hospital database and real-time updates.</li>
-        <li>Advanced reporting and analytics for hospital management.</li>
-    </ul>
-</div>
+* Ayush
+* Anupam
+* Jigar
+* Nishant
 
-</body>
+---
+
+## ⚙️ Features
+
+### 👩‍⚕️ Doctor Management
+
+* Add doctors with ID, specialization, contact
+* Prevent duplicate IDs
+
+### 🧑‍⚕️ Patient Management
+
+* Store patient records with illness
+* Input validation for phone & ID
+
+### 📅 Appointment System
+
+* Connect Doctor ↔ Patient
+* Unique Appointment ID generation
+
+```
+Format: [DoctorID(4)] + [PatientID(5)] + [Date]
+Example: 00010001020240101
+```
+
+### 💰 Billing
+
+* Track payments
+* Update amount + status
+
+### 📦 Inventory System
+
+* Medicines (expiry tracking)
+* Equipment (maintenance tracking)
+* Stock add/remove with validation
+
+---
+
+## 🧠 System Design
+
+```
+Doctor ─────┐
+            ├── Appointment ─── Patient
+Inventory ──┘
+```
+
+---
+
+## 🛠️ Tech Stack
+
+* **Language:** C++
+* **Concepts:** OOP, STL (vector, deque)
+* **Interface:** Console-based CLI
+* **Storage:** File handling (persistent data)
+
+---
+
+## ▶️ How to Run
+
+```bash
+g++ main.cpp -o hospital
+./hospital
+```
+
+---
+
+## 🧪 Sample Flow
+
+```
+1 → Add Doctor
+2 → Add Patient
+3 → Book Appointment
+4 → View Data
+```
+
+---
+
+## ⚠️ Constraints & Validations
+
+| Input         | Rule              |
+| ------------- | ----------------- |
+| Phone         | Exactly 10 digits |
+| Doctor ID     | 0–9999            |
+| Patient ID    | 0–99999           |
+| Duplicate IDs | Rejected          |
+
+---
+
+## ❌ Current Limitations
+
+* No GUI (CLI only)
+* No database (file-based)
+* No authentication
+* Linear search (not optimized)
+
+---
+
+## 🔥 Future Improvements
+
+* GUI (Qt / Flutter)
+* Database (MySQL/PostgreSQL)
+* Fast lookup (hashing/indexing)
+* Role-based access (Admin/Staff)
+* Analytics dashboard
+
+---
+
+## 💡 What This Project Shows
+
+* You can design **connected systems**, not isolated classes
+* You understand **data flow + validation**
+* You can move from **logic → working program**
+
+---
+
+## 🧭 Reality Check
+
+If this project stays here, it’s **basic**.
+
+To make it resume-worthy:
+
+* Add file persistence properly
+* Add delete/update operations
+* Optimize search (maps)
+* Show real test cases
+
+---
+
+## 📌 License
+
+For academic and learning purposes.
